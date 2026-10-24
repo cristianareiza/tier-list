@@ -86,6 +86,13 @@
       }
     }
 
+    #instructions {
+      color: #aaa;
+      font-size: 14px;
+      text-align: center;
+      margin: 0 0 16px;
+    }
+
     #selector {
       display: flex;
       flex-direction: column;
@@ -172,6 +179,19 @@
       itemsSection.appendChild(imgElement)
       return imgElement
     }
+
+    const DEFAULT_IMAGES = [
+      'images/javascript.svg',
+      'images/typescript.svg',
+      'images/react.svg',
+      'images/node.svg',
+      'images/python.svg',
+      'images/git.svg',
+      'images/html.svg',
+      'images/css.svg'
+    ]
+
+    DEFAULT_IMAGES.forEach(createItem)
 
     function useFilesToCreateItems(files) {
       if (files && files.length > 0) {
@@ -319,6 +339,11 @@
   <header id="top-header">
     <img src="https://tiermaker.com/images/tiermaker-logo.png" />
   </header>
+
+  <p id="instructions">
+    Arrastra las imágenes a cada nivel. Con el botón + puedes subir las tuyas
+    y con el disquete descargas tu tier list.
+  </p>
 
   <section class="tier">
     <div class="row">
